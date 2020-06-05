@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@snowpack/app-scripts-react": "^1.1.4",
+    "snowpack": "^2.2.0",
+    "snowpack-plugin-import-map": "^1.0.0"
+  }
+}
