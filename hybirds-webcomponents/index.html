@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello ESM</title>
+</head>
+<body>
+  <hybirds-comp></hybirds-comp>
+  <script type="module">
+    import { define, render, html } from 'https://cdn.pika.dev/hybrids@4.2.1';
+
+    function increaseCount(host) {
+      host.count += 1;
+    }
+
+    const SimpleCounter = {
+      count: 0,
+      render: ({ count }) => html`
+        <h1>Hello Hybirds!</h1>
+        <button onclick="${increaseCount}">
+          Count: ${count}
+        </button>
+      `,
+    };
+
+    define('hybirds-comp', SimpleCounter);
+  </script>
+</body>
+</html>

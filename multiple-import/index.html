@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello ESM</title>
+</head>
+<body>
+  <h1>Multiple import!</h1>
+  <div id='root1'></div>
+  <div id='root2'></div>
+  <script type="module">
+    import mod from './mod.js';
+
+    document.querySelector('#root1').innerHTML = mod();
+  </script>
+  <script type="module">
+    import mod from './mod.js';
+
+    document.querySelector('#root2').innerHTML = mod();
+  </script>
+</body>
+</html>

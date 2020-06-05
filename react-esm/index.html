@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello ESM</title>
+</head>
+<body>
+  <div id='root'></div>
+  <script type="module">
+    import React from "https://cdn.pika.dev/react@^16.13.1";
+    import ReactDOM from "https://cdn.pika.dev/react-dom@^16.13.1";
+
+    ReactDOM.render(
+      React.createElement('h1', {}, "Hello React!"),
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>

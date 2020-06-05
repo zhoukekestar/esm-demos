@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello ESM</title>
+</head>
+<body>
+  <h1>Hello ESM!</h1>
+  <p></p>
+  <script type="module">
+    import moment from 'https://cdn.pika.dev/moment@^2.26.0';
+
+    document.querySelector('p').innerHTML = `This date is formated by moment: ${
+      moment().format('YYYY-MM-DD HH:mm:ss')
+    }`;
+  </script>
+</body>
+</html>

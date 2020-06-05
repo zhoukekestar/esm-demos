@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello ESM</title>
+</head>
+<body>
+  <div id='root'></div>
+  <script type="module">
+    import React from "https://cdn.pika.dev/react@^16.13.1";
+    import ReactDOM from "https://cdn.pika.dev/react-dom@^16.13.1";
+    import htm from "https://cdn.pika.dev/htm@3.0.4";
+
+    const html = htm.bind(React.createElement);
+
+    const Counter = (props) => {
+      const [count, setCount] = React.useState(parseInt(props.count));
+      return html`
+        <div>
+          <h1>${count}</h1>
+          <button onClick=${(e) => setCount(count - 1)}>Decrement</button>
+          <button onClick=${(e) => setCount(count + 1)}>Increment</button>
+        </div>
+      `;
+    };
+
+    ReactDOM.render(
+      html`
+        <${Counter} count="0" />
+      `,
+      document.querySelector("#root")
+    );
+
+  </script>
+</body>
+</html>

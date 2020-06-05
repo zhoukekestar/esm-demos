@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello ESM</title>
+</head>
+<body>
+  <div id='root'></div>
+  <script type="module">
+    import { html, render } from 'https://unpkg.com/htm/preact/standalone.module.js';
+    render(html`<h1>Hello Preact!</h1>`, document.querySelector('#root'));
+  </script>
+</body>
+</html>
