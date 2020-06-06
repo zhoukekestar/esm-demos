@@ -1,6 +1,7 @@
 {
   "extends": "@snowpack/app-scripts-react",
   "scripts": {
+    "mount:src": "mount src --to /dist",
     "build:js,jsx,ts,tsx": "snowpack-plugin-import-map"
   },
   "plugins": [

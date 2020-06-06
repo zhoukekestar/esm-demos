@@ -1,6 +1,7 @@
 {
   "extends": "@snowpack/app-scripts-react",
   "scripts": {
+    "mount:src": "mount src --to /dist",
     "build:js,jsx,ts,tsx": "snowpack-plugin-import-map"
   },
   "plugins": [
@@ -9,7 +10,7 @@
       {
         "react": "https://cdn.pika.dev/react@^16.13.1",
         "react-dom": "https://cdn.pika.dev/react-dom@^16.13.1",
-        "antd": "https://cdn.pika.dev/-/antd@v4.3.1-IhY8P1ybL5fQsevq1BOu/dist=es2019/antd.js",
+        "antd": "https://cdn.pika.dev/antd@v4.3.1",
         "hybrids": "https://cdn.pika.dev/hybrids@^4.1.9"
       }
     ]

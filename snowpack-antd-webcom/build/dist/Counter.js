@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "https://cdn.pika.dev/react@^16.13.1";
-import { Button, DatePicker } from "https://cdn.pika.dev/-/antd@v4.3.1-IhY8P1ybL5fQsevq1BOu/dist=es2019/antd.js";
+import { Button, DatePicker } from "https://cdn.pika.dev/antd@v4.3.1";
 export default function Counter(props) {
   const [count, setCount] = useState(props.count);
   useEffect(() => {
