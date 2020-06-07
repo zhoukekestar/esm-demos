@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello ESM</title>
+</head>
+<body>
+  <react-comp></react-comp>
+  <preact-comp></preact-comp>
+
+  <script type="module">
+    import React from "https://cdn.pika.dev/react@^16.13.1";
+    import ReactDOM from "https://cdn.pika.dev/react-dom@^16.13.1";
+
+    class ReactComp extends HTMLElement {
+      connectedCallback() {
+        ReactDOM.render(React.createElement('h1', {}, 'Hello React'), this)
+      }
+    }
+    customElements.define('react-comp', ReactComp);
+  </script>
+
+  <script type="module">
+    import { html, render } from 'https://unpkg.com/htm/preact/standalone.module.js';
+
+    class PreactComp extends HTMLElement {
+      connectedCallback() {
+        render(html`<h1>Hello Preact!</h1>`, this)
+      }
+    }
+    customElements.define('preact-comp', PreactComp);
+  </script>
+</body>
+</html>
